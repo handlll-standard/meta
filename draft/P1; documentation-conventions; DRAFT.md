@@ -4,7 +4,7 @@ Version: 0.0.1
 
 Authors: Zheng Hailang
 
-Discuss: N/A
+Discussion: N/A
 
 ## Document Structure
 
@@ -28,7 +28,7 @@ document = head lb body
 ;   # P1; Document Conventions; DRAFT
 ;   Obsoletes: P102
 ;   Authors: Zheng Hailang
-head = head fields
+head = heading fields
 
 ; Document main content
 body = text
@@ -40,15 +40,21 @@ body = text
 ; status can be omitted, PUBLISHED is the default status:
 ;
 ;   # P1; Document Conventions;
-head = id ";" *s title [ ";" *s status ]
+heading = id ";" *s title [ ";" *s status ]
 
-fields =  fieldversion lb fieldauthors lb fielddiscuss
+; Meta fields
+fields =  field-version lb field-authors lb field-discussion
 
-fieldversion = "Version" colon version
+; Version field
+; Docuement version number
+field-version = "Version" colon version
 
-fieldauthors = "Authors" colon (author *("," author))
+; Authors field
+; Who wrote this document
+field-authors = "Authors" colon (author *("," author))
 
-fielddiscuss = "Discuss" colon text
+; Discussion field
+field-discussion = "Discussion" colon text
 
 ; PUBLISHED is the default status.
 status = "DRAFT" / "PUBLISHED"
