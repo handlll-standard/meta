@@ -1,4 +1,4 @@
-# MoonRating Meta Standards Repository
+# Moonrating Meta Standards Repository
 
 This repository is for building and maintaining Moonrating global meta standards.
 
