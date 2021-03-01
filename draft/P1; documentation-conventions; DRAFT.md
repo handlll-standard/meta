@@ -94,6 +94,6 @@ lb = 1*"\n"
 s = 1*" "
 ```
 
-Resources:
+## Resources
 
 - To verify ABNF syntax: [Bill's ABNF Parser](https://tools.ietf.org/tools/bap/abnf.cgi)
