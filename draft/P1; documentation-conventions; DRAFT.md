@@ -1,4 +1,4 @@
-# P1; documentation-conventions; DRAFT
+# P1; Documentation Conventions; DRAFT
 
 Version: 0.0.1
 
@@ -93,3 +93,7 @@ lb = 1*"\n"
 ; Space
 s = 1*" "
 ```
+
+Resources:
+
+- You can verify ABNF syntax with [Bill's ABNF Parser](https://tools.ietf.org/tools/bap/abnf.cgi)
