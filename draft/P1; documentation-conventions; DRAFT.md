@@ -1,10 +1,10 @@
 # P1; Documentation Conventions; DRAFT
 
-Version: 0.0.1
+$Version: 0.0.2
 
-Authors: Zheng Hailang
+$Authors: Zheng Hailang
 
-Discussion: N/A
+$Discussion: N/A
 
 ## Document Structure
 
@@ -42,19 +42,22 @@ body = text
 ;   # P1; Document Conventions;
 heading = id ";" *s title [ ";" *s status ]
 
-; Meta fields
-fields =  field-version lb field-authors lb field-discussion
+; Meta fields, offical fields should prefix "$"
+fields =  field-version lb field-authors lb field-discussion *(lb field-custom)
 
 ; Version field
 ; Docuement version number
-field-version = "Version" colon version
+field-version = "$Version" colon version
 
 ; Authors field
 ; Who wrote this document
-field-authors = "Authors" colon (author *("," author))
+field-authors = "$Authors" colon (author *("," author))
 
 ; Discussion field
-field-discussion = "Discussion" colon text
+field-discussion = "$Discussion" colon text
+
+; Custom field
+field-custom = text colon text
 
 ; PUBLISHED is the default status.
 status = "DRAFT" / "PUBLISHED"
