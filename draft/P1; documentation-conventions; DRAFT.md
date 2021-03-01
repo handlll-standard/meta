@@ -96,4 +96,4 @@ s = 1*" "
 
 Resources:
 
-- You can verify ABNF syntax with [Bill's ABNF Parser](https://tools.ietf.org/tools/bap/abnf.cgi)
+- To verify ABNF syntax: [Bill's ABNF Parser](https://tools.ietf.org/tools/bap/abnf.cgi)
