@@ -21,17 +21,17 @@ Using [ABNF](https://tools.ietf.org/html/rfc5234) Syntax
 ;   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 ;   Asperiores consectetur corporis dicta dolores error est hic
 ;   illo ipsum iusto molestias officiis.
-document = meta lb content
+document = head lb body
 
 ; Example:
 ;
 ;   # P1; Document Conventions; DRAFT
 ;   Obsoletes: P102
 ;   Authors: Zheng Hailang
-meta = heading fields
+head = head fields
 
 ; Document main content
-content = text
+body = text
 
 ; Example:
 ;
@@ -40,7 +40,7 @@ content = text
 ; status can be omitted, PUBLISHED is the default status:
 ;
 ;   # P1; Document Conventions;
-heading = id ";" *s title [ ";" *s status ]
+head = id ";" *s title [ ";" *s status ]
 
 fields =  fieldversion lb fieldauthors lb fielddiscuss
 
