@@ -1,6 +1,12 @@
 # P1; Documentation Conventions; DRAFT
 
-$Version: 1.0.0 $Convention: 1.0.0 $Authors: Zheng Hailang $Discussion: N/A
+$Version: 1.0.0
+
+$Convention: 1.0.0
+
+$Authors: Zheng Hailang
+
+$Discussion: N/A
 
 ## Document Structure
 
