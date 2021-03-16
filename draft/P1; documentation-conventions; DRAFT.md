@@ -1,10 +1,6 @@
 # P1; Documentation Conventions; DRAFT
 
-$Version: 0.0.2
-
-$Authors: Zheng Hailang
-
-$Discussion: N/A
+$Version: 1.0.0 $Convention: 1.0.0 $Authors: Zheng Hailang $Discussion: N/A
 
 ## Document Structure
 
@@ -15,8 +11,9 @@ Using [ABNF](https://tools.ietf.org/html/rfc5234) Syntax
 ; Example:
 ;
 ;   # P1; Document Conventions; DRAFT
-;   Obsoletes: P102
-;   Authors: Zheng Hailang
+;   $Version: 1.0.0
+;   $Convention: 1.0.0
+;   $Authors: Zheng Hailang
 ;
 ;   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 ;   Asperiores consectetur corporis dicta dolores error est hic
@@ -26,8 +23,9 @@ document = head lb body
 ; Example:
 ;
 ;   # P1; Document Conventions; DRAFT
-;   Obsoletes: P102
-;   Authors: Zheng Hailang
+;   $Version: 1.0.0
+;   $Convention: 1.0.0
+;   $Authors: Zheng Hailang
 head = heading fields
 
 ; Document main content
@@ -43,11 +41,15 @@ body = text
 heading = id ";" *s title [ ";" *s status ]
 
 ; Meta fields, offical fields should prefix "$"
-fields =  field-version lb field-authors lb field-discussion *(lb field-custom)
+fields = field-version lb field-convention lb field-authors lb field-discussion *(lb field-custom)
 
 ; Version field
 ; Docuement version number
 field-version = "$Version" colon version
+
+; Convention field
+; Convention version number (Document format version)
+field-convention = "$Convention" colon version
 
 ; Authors field
 ; Who wrote this document
