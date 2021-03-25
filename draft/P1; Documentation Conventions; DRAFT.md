@@ -62,10 +62,10 @@ field-convention = "$Convention" colon docid "@" version
 field-authors = "$Authors" colon (author *("," author))
 
 ; Discussion field
-field-discussion = "$Discussion" colon text
+field-discussion = "$Discussion" colon url
 
 ; Custom field
-field-custom = text colon text
+field-custom = *"$" id colon text
 
 ; PUBLISHED is the default status.
 status = "DRAFT" / "PUBLISHED"
@@ -87,13 +87,28 @@ docid = scope digits
 ; "X" - Private
 scope = "P" / "X"
 
+; General identifier (like typical variable names)
+id = letter *(letter / digit)
+
+; URL
+url = text
+
 ; Text
 text = UNKNOWN
 
 ; Digit
-digit = "1" / "2" / "3" / "4" / "5" / "6" / "7" / "8" / "9" / "0"
+digit = %x30-39;
 
-; Digits
+; Letter (A-Za-z)
+letter = letteru / letterl
+
+; Upper-case letters (A-Z)
+letteru = %x41-5A;
+
+; Lower-case letters (a-z)
+letterl = %x61-7A;
+
+; Digits (0-9)
 digits = 1*digit
 
 ; Colon
