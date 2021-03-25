@@ -1,8 +1,10 @@
 # P1; Documentation Conventions; DRAFT
 
-$Version: 1.2.0
+$Stage: DRAFT
 
-$Convention: P1@1.2.0
+$Version: 1.2.1
+
+$Convention: P1@1.2.1
 
 $Authors: Zheng Hailang
 
@@ -41,17 +43,21 @@ body = text
 ;
 ;   # P1; Document Conventions; DRAFT
 ;
-; status can be omitted, PUBLISHED is the default status:
+; stage can be omitted, PUBLISHED is the default stage:
 ;
 ;   # P1; Document Conventions;
-heading = docid ";" *s title [ ";" *s status ]
+heading = docid ";" *s title [ ";" *s stage ]
 
 ; Meta fields, offical fields should prefix "$"
-fields = field-version lb field-convention lb field-authors lb field-discussion *(lb field-custom)
+fields = field-stage lb field-version lb field-convention lb field-authors lb field-discussion *(lb field-custom)
 
 ; Version field
 ; Docuement version number
 field-version = "$Version" colon version
+
+; Stage field
+; Docuement version number
+field-stage = "$Stage" colon stage
 
 ; Convention field
 ; Convention version number (Format document id and version)
@@ -67,8 +73,8 @@ field-discussion = "$Discussion" colon url
 ; Custom field
 field-custom = *"$" id colon text
 
-; PUBLISHED is the default status.
-status = "DRAFT" / "PUBLISHED"
+; PUBLISHED is the default stage.
+stage = "DRAFT" / "PUBLISHED"
 
 ; Document title.
 title = text

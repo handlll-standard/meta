@@ -1,8 +1,10 @@
 # P1; Documentation Conventions
 
-$Version: 1.0.0
+$Stage: PUBLISHED
 
-$Convention: 1.0.0
+$Version: 1.2.1
+
+$Convention: P1@1.2.1
 
 $Authors: Zheng Hailang
 
@@ -41,34 +43,38 @@ body = text
 ;
 ;   # P1; Document Conventions; DRAFT
 ;
-; status can be omitted, PUBLISHED is the default status:
+; stage can be omitted, PUBLISHED is the default stage:
 ;
 ;   # P1; Document Conventions;
-heading = id ";" *s title [ ";" *s status ]
+heading = docid ";" *s title [ ";" *s stage ]
 
 ; Meta fields, offical fields should prefix "$"
-fields = field-version lb field-convention lb field-authors lb field-discussion *(lb field-custom)
+fields = field-stage lb field-version lb field-convention lb field-authors lb field-discussion *(lb field-custom)
 
 ; Version field
 ; Docuement version number
 field-version = "$Version" colon version
 
+; Stage field
+; Docuement version number
+field-stage = "$Stage" colon stage
+
 ; Convention field
-; Convention version number (Document format version)
-field-convention = "$Convention" colon version
+; Convention version number (Format document id and version)
+field-convention = "$Convention" colon docid "@" version
 
 ; Authors field
 ; Who wrote this document
 field-authors = "$Authors" colon (author *("," author))
 
 ; Discussion field
-field-discussion = "$Discussion" colon text
+field-discussion = "$Discussion" colon url
 
 ; Custom field
-field-custom = text colon text
+field-custom = *"$" id colon text
 
-; PUBLISHED is the default status.
-status = "DRAFT" / "PUBLISHED"
+; PUBLISHED is the default stage.
+stage = "DRAFT" / "PUBLISHED"
 
 ; Document title.
 title = text
@@ -80,21 +86,39 @@ version = digits "." digits "." digits
 author = text
 
 ; Document identifier
-id = scope digits
+docid = scope digits
 
 ; Document scope
 ; "P" - Public
 ; "X" - Private
 scope = "P" / "X"
 
+; General identifier (like typical variable names)
+id = letter *(letter / digit / underscore)
+
+; URL
+url = text
+
 ; Text
 text = UNKNOWN
 
 ; Digit
-digit = "1" / "2" / "3" / "4" / "5" / "6" / "7" / "8" / "9" / "0"
+digit = %x30-39;
 
-; Digits
+; Letter (A-Za-z)
+letter = letteru / letterl
+
+; Upper-case letters (A-Z)
+letteru = %x41-5A;
+
+; Lower-case letters (a-z)
+letterl = %x61-7A;
+
+; Digits (0-9)
 digits = 1*digit
+
+; Underscore
+underscore = "_"
 
 ; Colon
 colon = ":"
