@@ -1,8 +1,8 @@
 # P1; Documentation Conventions; DRAFT
 
-$Version: 1.1.2
+$Version: 1.2.0
 
-$Convention: P1@1.1.2
+$Convention: P1@1.2.0
 
 $Authors: Zheng Hailang
 
