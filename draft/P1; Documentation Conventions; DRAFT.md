@@ -1,8 +1,8 @@
 # P1; Documentation Conventions; DRAFT
 
-$Version: 1.1.0
+$Version: 1.1.1
 
-$Convention: P1@1.0.0
+$Convention: P1@1.1.1
 
 $Authors: Zheng Hailang
 
@@ -44,7 +44,7 @@ body = text
 ; status can be omitted, PUBLISHED is the default status:
 ;
 ;   # P1; Document Conventions;
-heading = id ";" *s title [ ";" *s status ]
+heading = doc_id ";" *s title [ ";" *s status ]
 
 ; Meta fields, offical fields should prefix "$"
 fields = field-version lb field-convention lb field-authors lb field-discussion *(lb field-custom)
@@ -54,8 +54,8 @@ fields = field-version lb field-convention lb field-authors lb field-discussion 
 field-version = "$Version" colon version
 
 ; Convention field
-; Convention version number (Document format version)
-field-convention = "$Convention" colon id "@" version
+; Convention version number (Format document id and version)
+field-convention = "$Convention" colon doc_id "@" version
 
 ; Authors field
 ; Who wrote this document
@@ -80,7 +80,7 @@ version = digits "." digits "." digits
 author = text
 
 ; Document identifier
-id = scope digits
+doc_id = scope digits
 
 ; Document scope
 ; "P" - Public
