@@ -1,8 +1,8 @@
 # P1; Documentation Conventions; DRAFT
 
-$Version: 1.0.0
+$Version: 1.1.0
 
-$Convention: 1.0.0
+$Convention: P1@1.0.0
 
 $Authors: Zheng Hailang
 
@@ -55,7 +55,7 @@ field-version = "$Version" colon version
 
 ; Convention field
 ; Convention version number (Document format version)
-field-convention = "$Convention" colon version
+field-convention = "$Convention" colon id "@" version
 
 ; Authors field
 ; Who wrote this document
