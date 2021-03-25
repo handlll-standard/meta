@@ -88,7 +88,7 @@ docid = scope digits
 scope = "P" / "X"
 
 ; General identifier (like typical variable names)
-id = letter *(letter / digit)
+id = letter *(letter / digit / underscore)
 
 ; URL
 url = text
@@ -110,6 +110,9 @@ letterl = %x61-7A;
 
 ; Digits (0-9)
 digits = 1*digit
+
+; Underscore
+underscore = "_"
 
 ; Colon
 colon = ":"
