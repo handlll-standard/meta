@@ -2,13 +2,15 @@
 
 $Stage: DRAFT
 
-$Version: 2.0.0
+$Version: 2.0.2
 
-$Template: T1@2.0.0
+$Template: T1@2.0.2
 
 $Authors: Zheng Hailang
 
 $Discussion: https://github.com/moonrating-standard/meta/issues
+
+*Template meta info start, you can delete the following content while implementing this template.*
 
 ## Document Structure
 
@@ -57,43 +59,46 @@ fields = field-stage lb field-version lb field-template lb field-authors lb fiel
 ; @required
 ; @example:
 ;   $Stage: DRAFT
-field-stage = "$Stage" colon stage
+field-stage = "$Stage" kvd stage
 
 ; Version field
 ; Docuement version number
 ; @required
 ; @example:
 ;   $Version: 2.0.1
-field-version = "$Version" colon version
+field-version = "$Version" kvd version
 
 ; Template field
 ; Which template convention this document will apply (Format document id and version)
 ; @required
 ; @example:
 ;   $Template: T1@2.0.0
-field-template = "$Template" colon docid "@" version
+field-template = "$Template" kvd docid "@" version
 
 ; Authors field
 ; Who wrote this document
 ; @example:
 ;   $Authors: Zheng Hailang, Pink Floyd
-field-authors = "$Authors" colon (author *("," author))
+field-authors = "$Authors" kvd (author *("," author))
 
 ; Discussion field
 ; Where to discuss topic about this document
 ; @example:
 ;   $Discussion: example.com/discussion
-field-discussion = "$Discussion" colon url
+field-discussion = "$Discussion" kvd url
 
 ; Custom field
 ; For other needs
 ; @example:
 ;   Visibility: PUBLIC
 ;   Language_scope: C, C++ 
-field-custom = *"$" id colon text
+field-custom = *"$" id kvd text
 
 ; PUBLISHED is the default stage.
 stage = "DRAFT" / "PUBLISHED"
+
+; Key-value divider
+kvd = *s colon *s
 
 ; Document title.
 title = text
