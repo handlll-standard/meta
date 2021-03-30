@@ -15,7 +15,7 @@ $Discussion: N/A
 Using [ABNF](https://tools.ietf.org/html/rfc5234) Syntax
 
 ```abnf
-; Each document consits of two parts: meta info and actual content
+; Each document consits of two parts: meta info and actual content.
 ; Example:
 ;
 ;   # P1; Document Conventions; DRAFT
@@ -28,6 +28,7 @@ Using [ABNF](https://tools.ietf.org/html/rfc5234) Syntax
 ;   illo ipsum iusto molestias officiis.
 document = head lb body
 
+; Document meta data
 ; Example:
 ;
 ;   # P1; Document Conventions; DRAFT
