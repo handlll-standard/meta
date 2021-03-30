@@ -1,4 +1,4 @@
-# T2; Subject Definition; DRAFT
+# T2; Human Knowledge Subject Definition; DRAFT
 
 $Stage: DRAFT
 
@@ -10,15 +10,19 @@ $Authors: Zheng Hailang
 
 $Discussion: https://github.com/moonrating-standard/meta/issues
 
-$Name: (?)
+$Name: [? subject name]
 
-$Parent: (?)
+$Parent: [? subject parent name]
+
+## Definition
+
+[? subject definition ...]
+
+[? other body content ...]
 
 *Template meta info start, you can delete the following content while implementing this template.*
 
 ## Document Structure
-
-Using [ABNF](https://tools.ietf.org/html/rfc5234) Syntax
 
 ```abnf
 ; @extends(T1@2.0.0)
@@ -35,8 +39,6 @@ field-name = "$Name" kvd text
 ; @example:
 ;   $Parent: Algebra
 field-parent = "$Parent" kvd text
+
+body = h2 "Definition" lb text
 ```
-
-## Resources
-
-- To verify ABNF syntax: [Bill's ABNF Parser](https://tools.ietf.org/tools/bap/abnf.cgi)

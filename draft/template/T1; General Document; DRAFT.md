@@ -10,6 +10,8 @@ $Authors: Zheng Hailang
 
 $Discussion: https://github.com/moonrating-standard/meta/issues
 
+[? body content ...]
+
 *Template meta info start, you can delete the following content while implementing this template.*
 
 ## Document Structure
@@ -122,6 +124,24 @@ id = letter *(letter / digit / underscore)
 
 ; URL
 url = text
+
+; Heading 1
+h1 = text
+
+; Heading 2
+h2 = text
+
+; Heading 3
+h3 = text
+
+; Heading 4
+h4 = text
+
+; Heading 5
+h5 = text
+
+; Heading 6
+h6 = text
 
 ; Text
 text = UNKNOWN
