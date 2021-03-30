@@ -1,18 +1,18 @@
-# T2; Human Knowledge Subject Definition
+# D2; Science; DRAFT
 
-$Stage: PUBLISHED
+$Stage: DRAFT
 
-$Version: 1.0.1
+$Version: 1.0.0
 
-$Template: T2@1.0.1
+$Template: T2@2.0.2
 
 $Authors: Zheng Hailang
 
 $Discussion: https://github.com/moonrating-standard/meta/issues
 
-$Name: [? subject name]
+$Name: Science
 
-$Parent: [? subject parent name]
+$Parent: N/A
 
 ## Definition
 
