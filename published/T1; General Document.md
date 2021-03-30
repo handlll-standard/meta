@@ -1,26 +1,25 @@
-# P1; Documentation Conventions
+# T1; General Document;
 
 $Stage: PUBLISHED
 
-$Version: 1.2.1
+$Version: 2.0.0
 
-$Convention: P1@1.2.1
+$Template: T1@2.0.0
 
 $Authors: Zheng Hailang
 
-$Discussion: N/A
+$Discussion: https://github.com/moonrating-standard/meta/issues
 
 ## Document Structure
 
 Using [ABNF](https://tools.ietf.org/html/rfc5234) Syntax
 
 ```abnf
-; Each document consits of two parts: meta info and actual content.
-; Example:
-;
-;   # P1; Document Conventions; DRAFT
+; Each document consits of two parts: meta info and actual content
+; @example:
+;   # T1; General Documentation Conventions; DRAFT
 ;   $Version: 1.0.0
-;   $Convention: 1.0.0
+;   $Template: T1@1.2.1
 ;   $Authors: Zheng Hailang
 ;
 ;   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -28,50 +27,69 @@ Using [ABNF](https://tools.ietf.org/html/rfc5234) Syntax
 ;   illo ipsum iusto molestias officiis.
 document = head lb body
 
-; Document meta data
-; Example:
-;
-;   # P1; Document Conventions; DRAFT
+; @example:
+;   # T1; General Documentation Conventions; DRAFT
 ;   $Version: 1.0.0
-;   $Convention: 1.0.0
+;   $Template: T1@1.2.1
 ;   $Authors: Zheng Hailang
 head = heading fields
 
 ; Document main content
 body = text
 
-; Example:
-;
-;   # P1; Document Conventions; DRAFT
-;
+; @example:
+;   # T1; General Documentation Conventions; DRAFT
 ; stage can be omitted, PUBLISHED is the default stage:
-;
-;   # P1; Document Conventions;
+;   # T1; Document Conventions;
 heading = docid ";" *s title [ ";" *s stage ]
 
 ; Meta fields, offical fields should prefix "$"
-fields = field-stage lb field-version lb field-convention lb field-authors lb field-discussion *(lb field-custom)
+; @example:
+;   $Stage: DRAFT
+;   $Version: 2.0.0
+;   $Template: T1@2.0.0
+;   $Authors: Zheng Hailang
+;   $Discussion: example.com/discussion
+fields = field-stage lb field-version lb field-template lb field-authors lb field-discussion *(lb field-custom)
+
+; Stage field
+; Docuement stage
+; @required
+; @example:
+;   $Stage: DRAFT
+field-stage = "$Stage" colon stage
 
 ; Version field
 ; Docuement version number
+; @required
+; @example:
+;   $Version: 2.0.1
 field-version = "$Version" colon version
 
-; Stage field
-; Docuement version number
-field-stage = "$Stage" colon stage
-
-; Convention field
-; Convention version number (Format document id and version)
-field-convention = "$Convention" colon docid "@" version
+; Template field
+; Which template convention this document will apply (Format document id and version)
+; @required
+; @example:
+;   $Template: T1@2.0.0
+field-template = "$Template" colon docid "@" version
 
 ; Authors field
 ; Who wrote this document
+; @example:
+;   $Authors: Zheng Hailang, Pink Floyd
 field-authors = "$Authors" colon (author *("," author))
 
 ; Discussion field
+; Where to discuss topic about this document
+; @example:
+;   $Discussion: example.com/discussion
 field-discussion = "$Discussion" colon url
 
 ; Custom field
+; For other needs
+; @example:
+;   Visibility: PUBLIC
+;   Language_scope: C, C++ 
 field-custom = *"$" id colon text
 
 ; PUBLISHED is the default stage.
@@ -87,12 +105,12 @@ version = digits "." digits "." digits
 author = text
 
 ; Document identifier
-docid = scope digits
+docid = type digits
 
-; Document scope
-; "P" - Public
-; "X" - Private
-scope = "P" / "X"
+; Document type
+; "T" - Template, document format template for regular document to "implement"
+; "D" - Document, regular document
+type = "T" / "D"
 
 ; General identifier (like typical variable names)
 id = letter *(letter / digit / underscore)
