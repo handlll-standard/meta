@@ -1,8 +1,8 @@
-# D1; Terms Definition
+# D1; Terms Definition; DRAFT
 
-$Stage: PUBLISHED
+$Stage: DRAFT
 
-$Version: 2.0.2
+$Version: 1.0.0
 
 $Template: T1@2.0.2
 
@@ -16,14 +16,14 @@ $Discussion: https://github.com/moonrating-standard/meta/issues
 
 Knowledge node, each level of knowledge is a knode, no matter how we call it usually (Category, Knowledge Point...):
 
-- Computer Science <-- Each level in this tree is considered d knode
-    - Physics
-        - Classical Mechanics
-            - Position
-            - Velocity
-            - Speed
+- Computer Science <- Each level in this tree is considered a knode
+    - Physics <- Knode
+        - Classical Mechanics <- Knode
+            - Position <- Knode
+            - Velocity <- Knode
+            - Speed <- Knode
             - ...
-        - Relativistic mechanics
+        - Relativistic mechanics <- Knode
         - ...
-    - Math
+    - Math <- Knode
     - ...
