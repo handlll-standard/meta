@@ -1,6 +1,6 @@
-# D1; Terms Definition
+# D1; Terms Definition; DRAFT
 
-$Stage: PUBLISHED
+$Stage: DRAFT
 
 $Version: 2.0.2
 
