@@ -1,10 +1,10 @@
-# T2; Human Knowledge Subject Definition
+# T2; Knowledge Node Definition
 
-$Stage: PUBLISHED
+$Stage: DRAFT
 
-$Version: 1.0.1
+$Version: 1.0.2
 
-$Template: T2@1.0.1
+$Template: T2@1.0.2
 
 $Authors: Zheng Hailang
 
