@@ -1,6 +1,6 @@
 # T2; Knowledge Node Definition
 
-$Stage: DRAFT
+$Stage: PUBLISHED
 
 $Version: 1.0.2
 
