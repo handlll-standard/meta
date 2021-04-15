@@ -1,6 +1,6 @@
-# Moonrating Meta Standards Repository
+# Handlll Meta Standards Repository
 
-This repository is for building and maintaining Moonrating global meta standards.
+This repository is for building and maintaining Handlll global meta standards.
 
 ```text
 .

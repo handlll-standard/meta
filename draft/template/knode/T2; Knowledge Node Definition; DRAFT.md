@@ -2,23 +2,30 @@
 
 $Stage: DRAFT
 
-$Version: 1.0.2
+$Version: 1.1.2
 
-$Template: T2@1.0.2
+$Template: T1@2.0.2
 
 $Authors: Zheng Hailang
 
-$Discussion: https://github.com/moonrating-standard/meta/issues
+$Discussion: https://github.com/handlll-standard/meta/issues
 
-$Name: [? subject name]
+$Name: [? Subject name]
 
-$Parent: [? subject parent name]
+$Parent: [? Subject parent name]
 
 ## Definition
 
-[? subject definition ...]
+[? Subject definition ...]
 
-[? other body content ...]
+## Necessity and Usage
+
+[? What are the scenarios for using this subject
+    [? Real world application of this subject]
+    [? What would happen if this subject does not exist]
+]
+
+[? Other body content ...]
 
 *Template meta info start, you can delete the following content while implementing this template.*
 
@@ -40,5 +47,5 @@ field-name = "$Name" kvd text
 ;   $Parent: Algebra
 field-parent = "$Parent" kvd text
 
-body = h2 "Definition" lb text
+body = h2 "Definition" lb h2 "Necessity and Usage" lb text
 ```

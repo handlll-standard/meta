@@ -8,7 +8,7 @@ $Template: T1@2.0.2
 
 $Authors: Zheng Hailang
 
-$Discussion: https://github.com/moonrating-standard/meta/issues
+$Discussion: https://github.com/handlll-standard/meta/issues
 
 [? body content ...]
 
