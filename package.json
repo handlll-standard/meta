@@ -1,0 +1,24 @@
+{
+  "name": "handlll_standard_meta",
+  "version": "0.1.0",
+  "description": "This repository is for building and maintaining Handlll global meta standards.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonrating-standard/meta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moonrating-standard/meta/issues"
+  },
+  "homepage": "https://github.com/moonrating-standard/meta#readme",
+  "devDependencies": {
+    "@types/yargs": "^16.0.1",
+    "yargs": "^16.2.0"
+  }
+}

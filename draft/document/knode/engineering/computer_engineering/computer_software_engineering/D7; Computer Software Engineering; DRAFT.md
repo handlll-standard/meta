@@ -1,4 +1,4 @@
-# D4; Engineering; DRAFT
+# D7; Computer Software Engineering
 
 $Stage: DRAFT
 
@@ -10,13 +10,13 @@ $Authors: Zheng Hailang
 
 $Discussion: https://github.com/handlll-standard/meta/issues
 
-$Name: Engineering
+$Name: Computer Software Engineering
 
-$Parent: N/A
+$Parent: D5; Computer Engineering
 
 ## Definition
 
-The application of scientific principles to solve problems.
+[! Subject definition ...]
 
 ## Necessity and Usage
 
@@ -24,4 +24,3 @@ The application of scientific principles to solve problems.
     [! Real world application of this subject]
     [! What would happen if this subject does not exist]
 ]
-

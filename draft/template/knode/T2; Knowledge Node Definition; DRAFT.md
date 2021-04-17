@@ -2,27 +2,27 @@
 
 $Stage: DRAFT
 
-$Version: 1.1.2
+$Version: 1.2.2
 
-$Template: T1@2.0.2
+$Template: T1@2.1.0
 
 $Authors: Zheng Hailang
 
 $Discussion: https://github.com/handlll-standard/meta/issues
 
-$Name: [? Subject name]
+$Name: [! Subject name]
 
-$Parent: [? Subject parent name]
+$Parent: [! Parent subject docid]; [? Parent subject name]
 
 ## Definition
 
-[? Subject definition ...]
+[! Subject definition ...]
 
 ## Necessity and Usage
 
-[? What are the scenarios for using this subject
-    [? Real world application of this subject]
-    [? What would happen if this subject does not exist]
+[! What are the scenarios for using this subject
+    [! Real world application of this subject]
+    [! What would happen if this subject does not exist]
 ]
 
 [? Other body content ...]
@@ -44,8 +44,8 @@ field-name = "$Name" kvd text
 
 ; Parent subject name
 ; @example:
-;   $Parent: Algebra
-field-parent = "$Parent" kvd text
+;   $Parent: D2
+field-parent = "$Parent" kvd docid
 
 body = h2 "Definition" lb h2 "Necessity and Usage" lb text
 ```

@@ -4,28 +4,28 @@ $Stage: PUBLISHED
 
 $Version: 1.1.2
 
-$Template: T1@2.0.2
+$Template: T1@2.1.0
 
 $Authors: Zheng Hailang
 
 $Discussion: https://github.com/handlll-standard/meta/issues
 
-$Name: [? Subject name]
+$Name: [! Subject name]
 
-$Parent: [? Subject parent name]
+$Parent: [! Subject parent name]
 
 ## Definition
 
-[? Subject definition ...]
+[! Subject definition ...]
 
 ## Necessity and Usage
 
-[? What are the scenarios for using this subject
-    [? Real world application of this subject]
-    [? What would happen if this subject does not exist]
+[! What are the scenarios for using this subject
+[! Real world application of this subject]
+[! What would happen if this subject does not exist]
 ]
 
-[? Other body content ...]
+[! Other body content ...]
 
 *Template meta info start, you can delete the following content while implementing this template.*
 

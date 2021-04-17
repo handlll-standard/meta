@@ -1,4 +1,4 @@
-# D4; Engineering; DRAFT
+# D6; Computer Science; DRAFT
 
 $Stage: DRAFT
 
@@ -10,9 +10,9 @@ $Authors: Zheng Hailang
 
 $Discussion: https://github.com/handlll-standard/meta/issues
 
-$Name: Engineering
+$Name: Computer Science
 
-$Parent: N/A
+$Parent: D3; Science
 
 ## Definition
 
@@ -24,4 +24,3 @@ The application of scientific principles to solve problems.
     [! Real world application of this subject]
     [! What would happen if this subject does not exist]
 ]
-

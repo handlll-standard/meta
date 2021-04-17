@@ -4,7 +4,7 @@ $Stage: DRAFT
 
 $Version: 1.0.0
 
-$Template: T2@1.1.2
+$Template: T2@1.2.2
 
 $Authors: Zheng Hailang
 
@@ -16,13 +16,13 @@ $Parent: N/A
 
 ## Definition
 
-[? Subject definition ...]
+[! Subject definition ...]
 
 ## Necessity and Usage
 
-[? What are the scenarios for using this subject
-    [? Real world application of this subject]
-    [? What would happen if this subject does not exist]
+[! What are the scenarios for using this subject
+    [! Real world application of this subject]
+    [! What would happen if this subject does not exist]
 ]
 
-[? Other body content ...]
+[! Other body content ...]

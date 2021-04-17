@@ -4,7 +4,7 @@ $Stage: DRAFT
 
 $Version: 1.0.0
 
-$Template: T2@1.1.2
+$Template: T2@1.2.2
 
 $Authors: Zheng Hailang
 
