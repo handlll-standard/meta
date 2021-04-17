@@ -1,5 +1,18 @@
 #!/usr/bin/env node
 
+const { get_next_docid } = require('./lib/docid');
+const { cyanBright } = require('chalk');
+
 const yargs = require('yargs');
 
-yargs.help().argv;
+yargs
+    .command({
+        command: 'next_id',
+        desc: 'Get next docid',
+        handler() {
+            const r = get_next_docid();
+            console.log(`Next document id: ${cyanBright`D${r.D}`}`);
+            console.log(`Next template id: ${cyanBright`T${r.T}`}`);
+        },
+    })
+    .help().argv;

@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/moonrating-standard/meta#readme",
   "devDependencies": {
+    "@types/shelljs": "^0.8.8",
     "@types/yargs": "^16.0.1",
+    "chalk": "^4.1.0",
+    "pegjs": "^0.10.0",
+    "shelljs": "^0.8.4",
+    "walkdir": "^0.4.1",
     "yargs": "^16.2.0"
   }
 }
